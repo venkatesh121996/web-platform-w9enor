@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <div style='background-image: url("https://ag-quiz-2022.surge.sh/background.webp");
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;'>
+        <img src="https://ag-quiz-2022.surge.sh/logo.jpg" style='max-width: 100px;' />
+        <h1 style='text-align: center;
+    color: white;
+    font-family: "sans-serif";
+    font-weight: 500;'>Understanding the fundamentals of state in Javascript</h1>
+        <button style='color: white;
+    font-family: "sans-serif";
+    background-color: transparent;
+    border-width: 1px;
+    height: 40px;
+    width: 180px;
+    border-radius: 20px;
+    border-color: #c9065e;'>Designed by Veera Venkatesh.P</button>
+    </div>
+    <div style='padding-left: 200px;
+    padding-right: 200px;'>
+        <div>
+            <p style='font-family: "sans-serif";
+    font-size: 18px;
+    color: #a6929b;'>In earlier chapters, we’ve dealt mostly with functional React components that do not require state management. This chapter’s main focus is on state, its management and components that utilise it in React.</p>
+            <h1 style='font-family: "sans-serif";
+    font-size: 25px;'>What is State?</h1>
+            <p style='font-family: "sans-serif";
+    font-size: 18px;
+    color: #a6929b; padding-top: 0px;
+    margin-top: 0px;'>State is a JavaScript object that stores a component’s dynamic data and determines the component’s behaviour. Because state is dynamic, it enables a component to keep track of changing information in between renders and for it to be dynamic and interactive.</p>
+            <p style='font-family: "sans-serif";
+    font-size: 18px;
+    color: #a6929b;'>State is similar to props but unlike props, it is private to a component and is controlled solely by the said component. In the examples from previous chapters, the behaviour of components has primarily depended on the props that are passed down to them. In those cases, the components that receive the props have no control over them because props are read-only.</p>
+        </div>
+        <div>
+            <h1 style='font-family: "sans-serif";
+    font-size: 25px;'>
+                Adding State to a Class Component
+            </h1>
+            <div style='font-family: "sans-serif";
+    font-size: 15px;'>
+                <pre style='background-color: #d9ccd2;
+    padding: 10px;
+    border-style: solid;
+    border-color: #564bf2;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    text-align: left;'>
+    class Greeting extends React.Component {
+      render(){
+        return <span>&lt;h1&gt;I’m a component in need of some state!&lt;h1/&gt;</span>;
+      }
+    }
+                </pre>
+                <p style='font-family: "sans-serif";
+    font-size: 18px;
+    color: #a6929b;'>Adding state to the Greeting component above involves defining within the class component, a constructor function that assigns the initial state using this.state.</p>
+                <pre style='background-color: #d9ccd2;
+    padding: 10px;
+    border-style: solid;
+    border-color: #564bf2;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    text-align: left;'>
+    class Greeting extends React.Component {
+        constructor(props) {
+          super(props);
+            // Define your state object here
+            this.state = {
+             name: ‘Jane Doe’
+            }
+        }
+        render(){
+            return <span>&lt;h1&gt; Hello {this.state.name} &lt;h1/&gt;</span>;
+        }
+    }
+                </pre>
+            </div>
+        </div>
+        <div>
+            <h1 style='font-family: "sans-serif";
+    font-size: 25px;'>
+                Investigating State using React Dev Tools
+            </h1>
+            <p style='font-family: "sans-serif";
+    font-size: 18px;
+    color: #a6929b; padding-top: 0px;
+    margin-top: 0px;'>
+                The devtools are available for download on both Mozilla Firefox Add-ons and the Chrome Web Store. Follow the appropriate link to install the devtools depending on which browser you have installed on your computer. Throughout the rest of this book, Chrome will be used as the browser of choice. In order to confirm successful installation of the devtools on Chrome, open the developer tools window using Cmd+Opt+I on a Mac or Ctrl+Alt+I on a windows PC. You should now see a React tab.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
